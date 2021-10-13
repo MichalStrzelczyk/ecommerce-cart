@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Red Widget",
+    "code": "R01",
+    "price": 3295,
+    "currency": "USD"
+  },
+  {
+    "name": "Green Widget",
+    "code": "G01",
+    "price": 2495,
+    "currency": "USD"
+  },
+  {
+    "name": "Blue Widget",
+    "code": "B01",
+    "price": 795,
+    "currency": "USD"
+  }
+]
