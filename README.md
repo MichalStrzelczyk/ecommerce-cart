@@ -1,5 +1,7 @@
 # Cart library
 
+A simple example of implementing a shopping cart in an ecommerce portal.
+
 ## 1. Installation
 
 ```php
@@ -9,13 +11,23 @@ cd ecommerce-cart && composer install
 
 ## 2. Usage
 
+In order to create a new shopping cart, the object
+
+You can see more examples of the library's use in integration tests here:
+[./tests]
 
 ## 2.1 Creating
 
 ## 2.2 Special offers
 
+Special offer is a class which must implement the `ISpecialOffer` interface.
+These objects are run every time when product is added to the card or is deleted.
+By special offer you are able to define custom business basket behavior like: creating discounts for product, group or products, rules of shipping costs etc...  
 
+**CAUTION: the order of definition special offers objects matters** 
 
+All special orders must be injected during the card object is created.
+It is not possible to edit them on the fly.
 
 ## 3. Tests
 
