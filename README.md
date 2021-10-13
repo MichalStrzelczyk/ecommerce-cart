@@ -18,7 +18,30 @@ You can see more examples of the library's use in integration tests here:
 
 ## 2.1 Creating
 
-## 2.2 Special offers
+## 2.2 Adding product
+
+
+
+```php
+    $card->addProduct($product,10);
+```
+
+**CAUTION: default quantity is set to 1**
+
+**CAUTION: product objects are ALWAYS cloned**
+
+
+## 2.3 Removing product
+
+To remove any product from the cart, you must use the `removeProduct` method.
+It is not possible to remove many products on the same time.
+
+```php
+    $card->removeProduct($productHash);
+```
+**CAUTION: if you want to remove not existing product, the InvalidArgumentException will be thrown**
+
+## 2.4 Special offers
 
 Special offer is a class which must implement the `ISpecialOffer` interface.
 These objects are run every time when product is added to the card or is deleted.
