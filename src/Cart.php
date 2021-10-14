@@ -36,6 +36,10 @@ class Cart implements ICart {
     }
 
     public function addProduct(IProduct $product, int $quantity = 1): ICart {
+        if ($quantity < 1) {
+            throw new \InvalidArgumentException("Quantity must be greater than 0");
+        }
+
         for ($i=0;$i<$quantity;$i++){
             $productCartId = \uniqid();
             $this->products[$productCartId] = clone $product;
