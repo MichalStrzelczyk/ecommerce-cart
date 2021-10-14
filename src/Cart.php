@@ -10,7 +10,7 @@ use \DigitalFarm\Cart\Product\Price\IPriceCalculator;
 
 class Cart implements ICart {
 
-    /** @var []ICartProduct $products */
+    /** @var []IProduct $products */
     private $products = [];
 
     /** @var IPrice|null  */
