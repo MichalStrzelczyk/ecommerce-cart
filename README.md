@@ -48,7 +48,7 @@ hash is generated. This is then used to remove the selected product from the car
 To see all product you can run
 
 ```php
-$products = $card->getProducts();
+    $products = $card->getProducts();
 ```
 As a result you will get:
 ```php
